@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+
 import Card from './Share/Card'
 
 function FeedbackItem({item}) {
@@ -15,5 +17,10 @@ function FeedbackItem({item}) {
     </Card>
   )
 }
+FeedbackItem.propTpes = {
+  item: PropTypes.object.isRequired
+}
+
+
 
 export default FeedbackItem
