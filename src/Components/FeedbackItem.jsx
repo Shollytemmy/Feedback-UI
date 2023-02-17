@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
+import Card from './Share/Card'
 
 function FeedbackItem({item}) {
   
 
  
   return (
-    <div className='card'>
+    <Card reverse={true}>
       <div className="num-display">{item.rating}</div>
       <div className="text-display">
         <p>{item.text}</p>
       </div>
     
-    </div>
+    </Card>
   )
 }
 
