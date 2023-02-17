@@ -4,8 +4,8 @@ import PropTypes from 'prop-types'
 function Header({text, bgColor, textColor}) {
 
     const styles ={
-        backgroundColor: "blue",
-        color: "red"
+        backgroundColor: bgColor,
+        color: textColor
     }
   return (
     <header style={styles}>
