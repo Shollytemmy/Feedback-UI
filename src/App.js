@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid"
+import { Routes,  Route } from "react-router-dom";
 import Header from "./Components/Header.jsx"
 import FeedbackList from "./Components/FeedbackList.jsx"
 import feedbackData from "./data/feedbackData.js";
@@ -22,22 +23,27 @@ function App() {
     if(window.confirm("Are you sure you want to delrte this Item")){
       setFeedback(feedback.filter((item) => item.id !== id))
     }
-    console.log("App Function ", id);
+    
   }
   return (
-    <>
+    <Routes>
+    
     <Header  />
      <div className="container">
-
-      <FeedbackForm addFeedback={addFeedback} />
+      <Route path="/">
+         <FeedbackForm addFeedback={addFeedback} />
        
         <FeedbackStas feedback={feedback} />
       
     
       <FeedbackList feedback= {feedback} handleDelete={handleDelete} />
+
+      </Route>
+
+     
       
     </div>
-    </>
+    </Routes>
    
   );
 }
