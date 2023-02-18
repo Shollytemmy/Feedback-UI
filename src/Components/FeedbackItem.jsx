@@ -7,9 +7,7 @@ import FeedbackStas from './FeedbackStas'
 
 function FeedbackItem({item,  handleDelete}) {
 
-  // const handleDekete = (id) => {
-  //   console.log("Button clickrd", id);
-  // }
+ 
   
 
  
