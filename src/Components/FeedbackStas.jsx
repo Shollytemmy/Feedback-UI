@@ -8,7 +8,7 @@ const FeedbackStas = ({feedback}) => {
 
     } , 0) / feedback.length
 
-    average = average.toFixed(1).replace(/[.,]0$/, '')
+    average = average.toFixed(1).replace(/[.,]0$/, '') // ensure that it's a one decimal point and it replace any trilling space with an empty string
     return (
         <div className='feedback-stats'>
             <h4>{feedback.length} Reviews</h4>
@@ -18,7 +18,7 @@ const FeedbackStas = ({feedback}) => {
 }
 
 FeedbackStas.propTypes = {
-    FeedbackStas: PropTypes.array.isRequired
+    feedback: PropTypes.array.isRequired
 }
 
 export default FeedbackStas;

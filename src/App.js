@@ -4,6 +4,7 @@ import FeedbackList from "./Components/FeedbackList.jsx"
 import feedbackData from "./data/feedbackData.js";
 import FeedbackStas from "./Components/FeedbackStas.jsx";
 import './App.css';
+import FeedbackForm from "./Components/FeedbackForm.jsx";
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
     <>
     <Header  />
      <div className="container">
+
+      <FeedbackForm />
        
         <FeedbackStas feedback={feedback} />
       
