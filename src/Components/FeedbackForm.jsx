@@ -31,7 +31,7 @@ function FeedbackForm() {
       
       <form>
         <h2>How would you rate Your Service with us</h2>
-        <RatingSelect />
+        <RatingSelect select={(rating) => console.log(rating)} />
         <div className="input-group">
         
         <input type="text" placeholder='Enter your comment here' value={text} onChange={handleInputChange} />

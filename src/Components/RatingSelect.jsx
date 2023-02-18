@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 
-function RatingSelect() {
+function RatingSelect({select}) {
     const [selected, setSelected] = useState(10)
 
 
 
 
     const handleChange = (e) => {
-        console.log(typeof +e.target.value)
+        setSelected(+e.target.value)
+        select(+e.target.value)
     }
   return (
     <ul className='rating'>
