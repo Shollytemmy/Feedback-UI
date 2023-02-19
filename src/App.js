@@ -9,6 +9,7 @@ import './App.css';
 import FeedbackForm from "./Components/FeedbackForm.jsx";
 import AboutPage from "./Page/AboutPage.jsx";
 import AbouticonLink from "./Components/AbouticonLink.jsx";
+import { FeedbackProvider } from "./Components/Context/FeedbackContext";
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
     
   }
   return (
-    <>
+    <FeedbackProvider>
     
     <Header  />
    
@@ -55,7 +56,7 @@ function App() {
       </Routes>
     </div>
     
-    </>
+    </FeedbackProvider>
    
   );
 }
