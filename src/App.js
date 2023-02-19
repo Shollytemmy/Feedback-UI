@@ -13,21 +13,9 @@ import { FeedbackProvider } from "./Components/Context/FeedbackContext";
 
 
 function App() {
-  const [feedback, setFeedback] = useState(feedbackData)
+ 
 
-  const addFeedback = (newFeedback) => {
-    newFeedback.id = uuidv4()
-    // console.log(addFeedback)
-    setFeedback([newFeedback, ...feedback])
-
-  }
-
-  const handleDelete = (id) => {
-    if(window.confirm("Are you sure you want to delrte this Item")){
-      setFeedback(feedback.filter((item) => item.id !== id))
-    }
-    
-  }
+ 
   return (
     <FeedbackProvider>
     
@@ -37,12 +25,12 @@ function App() {
        <Routes>
       <Route path="/" element={
         <>
-        <FeedbackForm addFeedback={addFeedback} />
+        <FeedbackForm  />
        
         <FeedbackStas />
       
     
-      <FeedbackList handleDelete={handleDelete} />
+      <FeedbackList />
       <AbouticonLink />
         </>
       } />

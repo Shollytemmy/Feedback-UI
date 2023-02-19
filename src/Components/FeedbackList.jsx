@@ -5,9 +5,9 @@ import FeedbackContext from './Context/FeedbackContext'
 
 import FeedbackItem from './FeedbackItem'
 
-function FeedbackList({ handleDelete}) {
+function FeedbackList() {
 
-    const {feedback}  = useContext(FeedbackContext)
+    const {feedback, handleDelete}  = useContext(FeedbackContext)
     // console.log(FeedbackContext._currentValue)
     // console.log(feedback);
     
