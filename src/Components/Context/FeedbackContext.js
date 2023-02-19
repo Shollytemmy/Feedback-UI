@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-const feedbackContext = createContext()
+const FeedbackContext = createContext()
 
 
 export const FeedbackProvider = ({children}) =>{
@@ -12,14 +12,12 @@ export const FeedbackProvider = ({children}) =>{
         }
     ])
 
-    return <feedbackContext.Provider value={
+    return <FeedbackContext.Provider value={{
         feedback
-
-
-    }>
+    }}>
         {children}
 
-    </feedbackContext.Provider>
+    </FeedbackContext.Provider>
 }
 
-export default feedbackContext
+export default FeedbackContext
