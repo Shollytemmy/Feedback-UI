@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import {motion, AnimatePresence} from "framer-motion"
 import { useContext } from 'react'
 import FeedbackContext from './Context/FeedbackContext'
@@ -58,15 +57,7 @@ function FeedbackList({ handleDelete}) {
 //   )
 }
 
-FeedbackList.propTypes = {
-    feedback: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.number,
-            text: PropTypes.string,
-            rating: PropTypes.number
-        })
-    )
-}
+
 
 
 

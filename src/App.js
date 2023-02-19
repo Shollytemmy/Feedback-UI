@@ -39,10 +39,10 @@ function App() {
         <>
         <FeedbackForm addFeedback={addFeedback} />
        
-        <FeedbackStas feedback={feedback} />
+        <FeedbackStas />
       
     
-      <FeedbackList feedback= {feedback} handleDelete={handleDelete} />
+      <FeedbackList handleDelete={handleDelete} />
       <AbouticonLink />
         </>
       } />
