@@ -7,6 +7,8 @@ import feedbackData from "./data/feedbackData.js";
 import FeedbackStas from "./Components/FeedbackStas.jsx";
 import './App.css';
 import FeedbackForm from "./Components/FeedbackForm.jsx";
+import AboutPage from "./Page/AboutPage.jsx";
+import AbouticonLink from "./Components/AbouticonLink.jsx";
 
 
 function App() {
@@ -26,24 +28,34 @@ function App() {
     
   }
   return (
-    <Routes>
+    <>
     
     <Header  />
+   
      <div className="container">
-      <Route path="/">
-         <FeedbackForm addFeedback={addFeedback} />
+       <Routes>
+      <Route path="/" element={
+        <>
+        <FeedbackForm addFeedback={addFeedback} />
        
         <FeedbackStas feedback={feedback} />
       
     
       <FeedbackList feedback= {feedback} handleDelete={handleDelete} />
+      <AbouticonLink />
+        </>
+      } />
 
-      </Route>
+      <Route path="about" element={<AboutPage />} />
+         
+
+      
 
      
-      
+      </Routes>
     </div>
-    </Routes>
+    
+    </>
    
   );
 }

@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+
 import PropTypes from 'prop-types'
 
 import Card from './Share/Card'
 import {FaTimes} from 'react-icons/fa'
-import FeedbackStas from './FeedbackStas'
+
 
 function FeedbackItem({item,  handleDelete}) {
 
