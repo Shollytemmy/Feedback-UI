@@ -7,7 +7,7 @@ import FeedbackItem from './FeedbackItem'
 
 function FeedbackList() {
 
-    const {feedback, handleDelete}  = useContext(FeedbackContext)
+    const {feedback}  = useContext(FeedbackContext)
     // console.log(FeedbackContext._currentValue)
     // console.log(feedback);
     
@@ -30,7 +30,7 @@ function FeedbackList() {
                     exit={{opacity: 0}}
                     >
                         <FeedbackItem key={item.id} item ={item}
-                   handleDelete = {handleDelete}
+                   
                     />
                     </motion.div>
                    

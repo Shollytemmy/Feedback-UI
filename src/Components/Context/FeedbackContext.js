@@ -10,7 +10,7 @@ export const FeedbackProvider = ({children}) =>{
 
      const addFeedback = (newFeedback) => {
     newFeedback.id = uuidv4()
-    // console.log(addFeedback)
+  
     setFeedback([newFeedback, ...feedback])
 
   }

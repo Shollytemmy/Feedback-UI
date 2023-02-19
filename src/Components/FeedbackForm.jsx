@@ -1,18 +1,24 @@
-import React, { useState } from 'react'
-import { useContext } from 'react'
+import React, { useState,  useContext  } from 'react'
 import FeedbackContext from './Context/FeedbackContext'
 import Card from './Share/Card'
 import Button from './Share/Button'
 import RatingSelect from './RatingSelect'
 
 function FeedbackForm() {
-  const {addFeedback} = useContext(FeedbackContext)
+ 
     const [text, setText] = useState("")
     const [rating, setRating] = useState(10)
     const [disabled, setDisabled] = useState(true)
     const [message, setMessage] = useState("")
+    
+     const {addFeedback} = useContext(FeedbackContext)
+
+
+
 
     const handleInputChange = (e) => {
+
+
         if(text === ""){
             setDisabled(true)
             setMessage(null)

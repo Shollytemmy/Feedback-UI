@@ -1,9 +1,8 @@
-import { useState } from "react";
-import { v4 as uuidv4 } from "uuid"
+
 import { Routes,  Route } from "react-router-dom";
 import Header from "./Components/Header.jsx"
 import FeedbackList from "./Components/FeedbackList.jsx"
-import feedbackData from "./data/feedbackData.js";
+
 import FeedbackStas from "./Components/FeedbackStas.jsx";
 import './App.css';
 import FeedbackForm from "./Components/FeedbackForm.jsx";
